@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supalead | 매출(계약) 중심 광고 최적화</title>
+
+  <meta name="description" content="웹 로그 연결부터 매출(계약) 중심 광고 최적화까지. Supalead는 계약 CPA 기준으로 마케팅을 최적화합니다." />
+  <meta name="theme-color" content="#F6F7FB" />
+
+  <!-- Pretendard -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+
+  <link rel="stylesheet" href="style_v2.css?v=v2" />
+</head>
+
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <!-- Header -->
+  <header class="header" data-elevate>
+    <div class="container header__inner">
+      <a class="brand" href="#" aria-label="Supalead 홈">
+        <span class="brand__mark" aria-hidden="true">S</span>
+        <span class="brand__text">Supalead</span>
+      </a>
+
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#how">How it works</a>
+        <a href="#calculator">계약 CPA</a>
+        <a href="#case">솔루션 사례</a>
+        <a href="#form">무료 진단</a>
+      </nav>
+
+      <div class="header__cta">
+        <button class="btn btn--ghost" type="button" onclick="scrollToCase()">솔루션 사례 받아보기</button>
+        <button class="btn" type="button" onclick="scrollToForm('agency')">무료 진단</button>
+
+        <button class="icon-btn" type="button" aria-label="메뉴 열기" data-menu-btn>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mnav" data-menu>
+      <div class="container mnav__inner">
+        <a href="#how" data-menu-link>How it works</a>
+        <a href="#calculator" data-menu-link>계약 CPA</a>
+        <a href="#case" data-menu-link>솔루션 사례</a>
+        <a href="#form" data-menu-link>무료 진단</a>
+
+        <div class="mnav__cta">
+          <button class="btn btn--ghost" type="button" onclick="scrollToCase()" data-menu-link>솔루션 사례 받아보기</button>
+          <button class="btn" type="button" onclick="scrollToForm('agency')" data-menu-link>무료 진단</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="pill__dot" aria-hidden="true"></span>
+            Contract-First Attribution
+          </div>
+
+          <h1 class="h1">
+            광고 성과를<br />
+            <span class="accent">리드 수</span>가 아닌 <span class="accent">계약 수</span>로 관리합니다
+          </h1>
+
+          <p class="lead">
+            Supalead는 광고 데이터를 <strong>계약·매출 데이터</strong>와 연결해,<br />
+            <strong>계약 CPA</strong> 기준으로 캠페인을 재설계하고 예산을 최적화합니다.<br />
+            마케팅 KPI와 대표 KPI를 일치시키는 구조를 만듭니다.
+          </p>
+
+          <div class="hero__bullets">
+            <div class="bullet">
+              <span class="bullet__icon" aria-hidden="true">◎</span>
+              <div>
+                <p class="bullet__t">계약 CPA 기준 성과 측정</p>
+                <p class="bullet__d">광고비 대비 실제 계약 수를 기준으로 성과를 실측합니다.</p>
+              </div>
+            </div>
+            <div class="bullet">
+              <span class="bullet__icon" aria-hidden="true">⛨</span>
+              <div>
+                <p class="bullet__t">CRM·매출 데이터 연동</p>
+                <p class="bullet__d">리드가 아닌 계약 신호를 광고 최적화에 반영합니다.</p>
+              </div>
+            </div>
+            <div class="bullet">
+              <span class="bullet__icon" aria-hidden="true">↻</span>
+              <div>
+                <p class="bullet__t">채널별 계약 기여도 분석</p>
+                <p class="bullet__d">어떤 채널·키워드가 계약을 만드는지 수치로 확인합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__cta">
+            <button class="btn btn--lg" type="button" onclick="scrollToForm('agency')">
+              무료 계약 CPA 진단
+            </button>
+
+            <button class="btn btn--lg btn--ghost" type="button" onclick="scrollToCase()">
+              솔루션 사례 받아보기
+            </button>
+          </div>
+
+          <div class="micro">
+            <span class="micro__dot" aria-hidden="true"></span>
+            평균 24시간 이내 전문가 회신
+          </div>
+        </div>
+
+        <!-- Right pipeline card -->
+        <div class="hero__card" id="pipeline" aria-label="Data Pipeline 카드">
+          <div class="pipe">
+            <div class="pipe__head">
+              <div class="pipe__badge" aria-hidden="true">⚡</div>
+              <div>
+                <p class="pipe__title">Data Pipeline</p>
+                <p class="pipe__sub">실시간 처리</p>
+              </div>
+            </div>
+
+            <div class="pipe__list">
+              <button class="pipe__item is-active" type="button" data-pipe="1">
+                <span class="pipe__num">1</span>
+                <span class="pipe__meta">
+                  <span class="pipe__name">유입 추적</span>
+                  <span class="pipe__desc">채널·키워드 유입을 정확히 기록</span>
+                </span>
+                <span class="pipe__chev" aria-hidden="true">›</span>
+              </button>
+
+              <button class="pipe__item" type="button" data-pipe="2">
+                <span class="pipe__num">2</span>
+                <span class="pipe__meta">
+                  <span class="pipe__name">계약 매칭</span>
+                  <span class="pipe__desc">리드와 계약 데이터를 연결</span>
+                </span>
+                <span class="pipe__chev" aria-hidden="true">›</span>
+              </button>
+
+              <button class="pipe__item" type="button" data-pipe="3">
+                <span class="pipe__num">3</span>
+                <span class="pipe__meta">
+                  <span class="pipe__name">계약 기반 최적화</span>
+                  <span class="pipe__desc">계약 CPA 기준으로 예산 최적화</span>
+                </span>
+                <span class="pipe__chev" aria-hidden="true">›</span>
+              </button>
+            </div>
+
+            <div class="pipe__stats">
+              <div class="stat">
+                <p class="stat__v"><span class="accent">＜50ms</span></p>
+                <p class="stat__k">처리 속도</p>
+              </div>
+              <div class="stat">
+                <p class="stat__v">99.9%</p>
+                <p class="stat__k">데이터 정확도</p>
+              </div>
+              <div class="stat">
+                <p class="stat__v">180일</p>
+                <p class="stat__k">추적 기간</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="container center">
+        <div class="chip">How It Works</div>
+        <h2 class="h2">광고 구조를 다시 설계하는 3단계 프로세스</h2>
+        <p class="sub">설치부터 연결, 운영까지. 계약 CPA 기준으로 개선 우선순위를 제안합니다.</p>
+      </div>
+
+      <div class="container steps">
+        <div class="steps__line" aria-hidden="true"></div>
+
+        <article class="step">
+          <div class="step__icon">
+            <span aria-hidden="true">&lt;/&gt;</span>
+            <span class="step__badge">01</span>
+          </div>
+          <h3 class="step__title">광고·CRM 구조 진단</h3>
+          <p class="step__desc">현재 리드 → 계약 전환 구조와 측정 가능 범위를 점검합니다.</p>
+          <div class="tag">현 상태 진단 리포트 제공</div>
+        </article>
+
+        <article class="step">
+          <div class="step__icon">
+            <span aria-hidden="true">⛃</span>
+            <span class="step__badge">02</span>
+          </div>
+          <h3 class="step__title">계약 데이터 연동 설계</h3>
+          <p class="step__desc">계약 이벤트가 광고 매체로 피드백되도록 연결 구조를 설계합니다.</p>
+          <div class="tag">CRM/스프레드시트 연동 옵션</div>
+        </article>
+
+        <article class="step">
+          <div class="step__icon step__icon--accent">
+            <span aria-hidden="true">▦</span>
+            <span class="step__badge">03</span>
+          </div>
+          <h3 class="step__title">계약 CPA 기반 운영</h3>
+          <p class="step__desc">계약 수 기준으로 예산을 재배분하고 지속적으로 개선합니다.</p>
+          <div class="tag">채널·키워드별 기여도 리포트</div>
+        </article>
+      </div>
+
+      <div class="container cta-row">
+        <div class="cta-row__copy">
+          <p class="cta-row__t">우리 회사의 계약 데이터 연결 가능 여부가 궁금하신가요?</p>
+          <p class="cta-row__d">무료 진단에서 연결 구조, 측정 범위, 개선 우선순위를 제안드립니다.</p>
+        </div>
+        <button class="btn" type="button" onclick="scrollToForm('agency')">무료 진단 받기</button>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section section--tint" id="calculator">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="chip">Contract CPA</div>
+            <h2 class="h2">계약 CPA 계산기</h2>
+            <p class="sub">현재 광고 구조를 계약 기준 지표로 점검해보세요.</p>
+          </div>
+        </div>
+
+        <div class="calc">
+          <div class="calc__box">
+            <label class="label" for="adCost">월 광고비</label>
+            <div class="input">
+              <span class="prefix">₩</span>
+              <input id="adCost" type="text" inputmode="numeric" placeholder="예: 5,000,000" autocomplete="off" />
+            </div>
+
+            <label class="label" for="contracts">월 계약 수</label>
+            <div class="input">
+              <input id="contracts" type="text" inputmode="numeric" placeholder="예: 12" autocomplete="off" />
+            </div>
+
+            <button class="btn" type="button" onclick="calculateCPA()">계산하기</button>
+            <p class="hint">* 계약 CPA = 광고비 ÷ 계약 수</p>
+          </div>
+
+          <!-- 결과 카드: 계산 후 버튼 노출 -->
+          <div class="calc__result" aria-live="polite">
+            <p class="calc__k">결과</p>
+
+            <p class="calc__v" id="result">값을 입력하면 현재 계약 CPA(월 기준)가 표시됩니다.</p>
+
+            <ul class="calc__tips" id="calcTips">
+              <li>계약 CPA를 채널/캠페인 단위로 분해하면 개선 포인트가 명확해집니다.</li>
+              <li>리드가 충분해도 계약이 적다면 ‘계약 신호’ 설계가 필요할 수 있습니다.</li>
+            </ul>
+
+            <div class="calc__actions" id="calcActions" hidden>
+              <button class="btn" type="button" onclick="scrollToForm('agency')">상담하러가기</button>
+              <button class="btn btn--ghost" type="button" onclick="resetCalculator()">다시 계산하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-row">
+          <div class="cta-row__copy">
+            <p class="cta-row__t">실제 기업은 어떻게 계약 CPA를 낮췄을까요?</p>
+            <p class="cta-row__d">
+              업종별 계약 전환 개선 사례와 채널별 기여도 분석 리포트를 받아보세요.
+            </p>
+          </div>
+          <button class="btn" type="button" onclick="scrollToCase()">
+            솔루션 사례 받아보기
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="section" id="form">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="chip">Free Diagnosis</div>
+            <h2 class="h2">무료 계약 CPA 진단 신청</h2>
+            <p class="sub">현재 구조를 진단하고, 계약 CPA 개선을 위한 실행 우선순위를 제안합니다.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <form id="leadForm" class="form" autocomplete="on">
+            <input type="hidden" id="type" name="type" value="agency" />
+
+            <div class="seg" role="tablist" aria-label="신청 유형 선택">
+              <button type="button" class="seg__btn is-active" data-type="agency" aria-selected="true">대행 상담</button>
+              <button type="button" class="seg__btn" data-type="solution" aria-selected="false">솔루션 데모</button>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="company">회사명</label>
+                <input id="company" name="company" type="text" placeholder="예: 수파리드" autocomplete="organization" required />
+              </div>
+              <div class="field">
+                <label for="role">직책</label>
+                <input id="role" name="role" type="text" placeholder="예: 마케팅 팀장" autocomplete="organization-title" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="monthlyAdCost">월 광고비 (원)</label>
+                <input id="monthlyAdCost" name="monthlyAdCost" type="text" inputmode="numeric" placeholder="예: 5,000,000" required />
+              </div>
+              <div class="field">
+                <label for="phone">연락처</label>
+                <input id="phone" name="phone" type="tel" placeholder="예: 010-1234-5678" autocomplete="tel" required />
+              </div>
+            </div>
+
+            <div class="agree">
+              <label class="check">
+                <input id="agree" type="checkbox" required />
+                <span>개인정보 처리에 동의합니다.</span>
+              </label>
+              <p class="agree__hint">제출 시 상담을 위한 연락을 드릴 수 있어요.</p>
+            </div>
+
+            <button class="btn btn--lg" type="submit">
+              <span class="btn__text">신청 완료</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <aside class="side">
+            <div class="side__card">
+              <p class="side__title">무료 진단에서 제공하는 것</p>
+              <ul class="side__list">
+                <li>채널별 계약 기여도 측정 가능 여부</li>
+                <li>현재 계약 CPA 추정치 및 병목 구간</li>
+                <li>개선 우선순위(2주 실험 플랜)</li>
+              </ul>
+            </div>
+
+            <div class="side__card side__card--soft">
+              <p class="side__title">이런 팀에 적합합니다</p>
+              <p class="side__desc">
+                리드는 꾸준한데 계약이 늘지 않거나,<br />
+                채널·키워드가 많아 운영이 복잡한 팀
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE FORM -->
+    <section class="section section--tint" id="case">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <div class="chip">Case Study</div>
+            <h2 class="h2">솔루션 사례 받아보기</h2>
+            <p class="sub">계약 CPA를 개선한 사례와 분석 프레임워크를 이메일로 보내드립니다.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <form id="caseForm" class="form" autocomplete="on">
+            <div class="row">
+              <div class="field">
+                <label for="caseCompany">회사명</label>
+                <input id="caseCompany" name="company" type="text" placeholder="회사명" required />
+              </div>
+              <div class="field">
+                <label for="caseEmail">이메일</label>
+                <input id="caseEmail" name="email" type="email" placeholder="이메일" required />
+              </div>
+            </div>
+
+            <div class="agree">
+              <label class="check">
+                <input id="caseAgree" type="checkbox" required />
+                <span>개인정보 처리에 동의합니다.</span>
+              </label>
+              <p class="agree__hint">제출 시 이메일로 리포트를 발송합니다.</p>
+            </div>
+
+            <button class="btn btn--lg" type="submit">
+              <span class="btn__text">사례 리포트 받아보기</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <aside class="side">
+            <div class="side__card">
+              <p class="side__title">리포트 내용</p>
+              <ul class="side__list">
+                <li>채널별 계약 기여도 분석 예시</li>
+                <li>계약 CPA 개선 구조</li>
+                <li>광고 예산 재배분 전략</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--foot">
+            <span class="brand__mark" aria-hidden="true">S</span>
+            <span class="brand__text">Supalead</span>
+          </div>
+          <p class="footnote">© <span id="year"></span> Supalead. All rights reserved.</p>
+        </div>
+
+        <div class="footer__links">
+          <a href="#how">How it works</a>
+          <a href="#calculator">계약 CPA</a>
+          <a href="#case">솔루션 사례</a>
+          <a href="#form" onclick="scrollToForm('agency');return false;">무료 진단</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="toast__text"></span>
+  </div>
+
+  <script src="script_v2.js"></script>
+</body>
+</html>
